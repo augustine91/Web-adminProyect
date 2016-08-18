@@ -15,24 +15,49 @@
 	 <!-- Latest compiled and minified JavaScript -->
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-<body> 
-<div class="page-header">
-  <h1 >Proyecto 2 </h1>
-</div>
-<div id="contextMenuContainer">
-	<ul id="contextMenu">
-  		<li><button type="button" class="btn btn-default" id="person-btn">Crear Persona</button></li>
-  		<li><button type="button" class="btn btn-default" id="project-btn">Crear Proyecto</button></li>
-  	</ul>
-</div>
-<div class="list-right">
-   
-</div>
+<body id="megawork" onload="getValue()">
 
+  <div class="o-layer">
+  </div>
+    <header>
+      <button id="hide" class="ui-button ui-corner-all ui-widget">Ocultar espera</button>
+      <button id="show" class="ui-button ui-corner-all ui-widget">Mostrar espera</button>
+      <button id="create-proyecto" class="ui-button ui-corner-all ui-widget">Crear Proyecto</button>
+      <button id="create-persona" class="ui-button ui-corner-all ui-widget">Crear Persona</button>
+    </header>
+    <div id="dialog-proyecto" class="modal-edit" title="Crear Proyecto">
+      <input type="text" id="text-proyect" placeholder="Nombre">
+        <button id="btn-proyecto" onclick="crearProyecto()" >Guardar</button>
+    </div>
+    <div id="dialog-persona" class="modal-edit" title="Crear Persona">
+      <input type="text" id="text-persone" placeholder="Nombre">
+      <button id="btn-persona" onclick="crearPersona()">Guardar</button>
+    </div>
 
-<div class="dropzone-wrapper">
+    <div id="dialog-proyectoe" class="modal-edit" title="Editar Proyecto">
+      <input type="text" id="text-proyecte" placeholder="Nombre">
+        <button id="btn-proyectoe" onclick="editarProyecto(this)" >Guardar</button>
+        <button id="btn-proyectob" onclick="borrarProyecto(this)" >Borrar</button>
+    </div>
+    <div id="dialog-personae" class="modal-edit" title="Editar Persona">
+      <input type="text" id="text-personee" placeholder="Nombre">
+      <button id="btn-personae" onclick="editarPersona(this)">Guardar</button>
+      <button id="btn-personab" onclick="borrarPersona(this)" >Borrar</button>
+    </div>
+
+    <article id="waitarea" class="persons" ondrop="droppersone(event)" ondragover="allowDrop(event)">
+      
+      
+    </article>
     
-</div>
-</div>
+
+    <article class="workarea" id="menuopen">
+      <section class="proyects" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+        
+
+      </section>
+      
+    </article>
 </body>
 </html>
