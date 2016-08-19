@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="dropzones.js"></script>
+    <script type="text/javascript" src="js/funtions.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/storage.js"></script>
+    <script type="text/javascript" src="js/contextmenu.js"></script>
     <script src="src/jquery.ui.position.js" type="text/javascript"></script>
     <script src="src/jquery.contextMenu.js" type="text/javascript"></script>
     <link href="src/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
@@ -20,15 +22,15 @@
 	 <!-- Latest compiled and minified JavaScript -->
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-<body id="megawork" onload="getValue()">
+<body>
 
   <div class="o-layer">
   </div>
     <header>
-      <button id="hide" class="ui-button ui-corner-all ui-widget">Ocultar espera</button>
-      <button id="show" class="ui-button ui-corner-all ui-widget">Mostrar espera</button>
-      <button id="create-proyecto" class="ui-button ui-corner-all ui-widget">Crear Proyecto</button>
-      <button id="create-persona" class="ui-button ui-corner-all ui-widget">Crear Persona</button>
+      <button id="hide" class="ui-button ui-corner-all ui-widget">Ocultar</button>
+      <button id="show" class="ui-button ui-corner-all ui-widget">Mostrar</button>
+      <button id="create-proyecto" class="ui-button ui-corner-all ui-widget">Proyecto </button>
+      <button id="create-persona" class="ui-button ui-corner-all ui-widget">Persona</button>
     </header>
     <div id="dialog-proyecto" class="modal-edit" title="Crear Proyecto">
       <input type="text" id="text-proyect" placeholder="Nombre">
@@ -49,12 +51,10 @@
       <button id="btn-personae" onclick="editarPersona(this)">Guardar</button>
       <button id="btn-personab" onclick="borrarPersona(this)" >Borrar</button>
     </div>
-
     <article id="waitarea" class="persons" ondrop="droppersone(event)" ondragover="allowDrop(event)">
       
       
     </article>
-    
 
     <article class="workarea" id="menuopen">
       <section class="proyects" ondrop="drop(event)" ondragover="allowDrop(event)">

@@ -16,14 +16,14 @@
     margin:0; 
     padding:0;
     
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 200px;
+    max-width: 250px;
     display: inline-block;
     position: absolute;
     list-style-type: none;
     
-    border: 1px solid #DDD;
-    background: #fff;
+    border: 3px solid #DDD;
+    background: #EEE;
     
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
        -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -32,12 +32,12 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .context-menu-item {
     padding: 2px 2px 2px 24px;
-    background-color: #fff;
+    background-color: #EEE;
     position: relative;
     -webkit-user-select: none;
        -moz-user-select: -moz-none;
